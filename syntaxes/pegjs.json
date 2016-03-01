@@ -59,10 +59,6 @@
             "match": "\\\\(x\\h{2}|u\\h{4}|[\"']|[^\\W\\d_]|\\\\)",
             "name": "constant.character.escape.pegjs"
         },
-        "illegal_string": {
-            "match": "[^\"]*[^\\n\\r\"\\\\]$",
-            "name": "invalid.illegal.string.pegjs"
-        },
         "literal": {
             "patterns": [
                 {
@@ -72,9 +68,6 @@
                     "patterns": [
                         {
                             "include": "#escape_sequence"
-                        },
-                        {
-                            "include": "#illegal_string"
                         }
                     ]
                 },
@@ -85,9 +78,6 @@
                     "patterns": [
                         {
                             "include": "#escape_sequence"
-                        },
-                        {
-                            "include": "#illegal_string"
                         }
                     ]
                 }
